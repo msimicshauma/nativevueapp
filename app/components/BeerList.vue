@@ -9,8 +9,8 @@
                     @tap="loadBeer(beer)"
                 > 
                     <StackLayout orientation="vertical">
-                        <Label :text="beer.name" textWrap="true"></Label>
-                        <Label :text="beer.tagline" textWrap="true"></Label>
+                        <Label :text="beer.name" textWrap="true" class="beer-name"></Label>
+                        <Label :text="beer.tagline" textWrap="true" class="beer-tagline"></Label>
                     </StackLayout>
                     <img :src="beer.image_url" class="beer-img"/>
                 </FlexboxLayout>
@@ -77,14 +77,25 @@
 
 <style scoped>
     .beer-item {
-      text-align: left;
-      padding: 20px 20px 20px 20px;
-      border-bottom-color: #888;
+      padding: 40px 40px 40px 40px;
+      border-bottom-color: #674172;
       border-bottom-width: 2px;
       color: #888;
     }
 
     .beer-img {
         width: 30px;
+    }
+
+    .beer-name {
+        width: 500px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .beer-tagline {
+        width: 500px;
+        font-size: 14px;
+        margin-top: 10px;
     }
 </style>
